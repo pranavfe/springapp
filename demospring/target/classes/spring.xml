@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="alien" class="com.pranav.demospring.Alien" scope="prototype">
+
+<constructor-arg name ="aname1" value="pranav" ></constructor-arg>
+<constructor-arg name ="aname" value="pranav" ></constructor-arg>
+</bean>
+
+<bean id="buyer" class="com.pranav.demospring.Buyer" autowire="byType">
+<property name="pname" value="pranav1"></property>
+<!-- <property name="lap" ref="laptop1"></property>-->
+ 
+ 
+ </bean> 
+
+<bean id="lap" class="com.pranav.demospring.Laptop" primary="true">
+<property name="brand" value="apple"></property>
+<property name="price" value="200"></property>
+</bean>
+
+<bean id="lap1" class="com.pranav.demospring.Laptop" >
+<property name="brand" value="apple2"></property>
+<property name="price" value="2002"></property>
+</bean>
+
+</beans>
